@@ -67,4 +67,4 @@ def armar_pdf(fecha, cliente, cantidad_Pizza, cantidad_Hamburguesa,
     pdf.set_font("Helvetica", "I", 9)
     pdf.cell(0, 6, "Presupuesto valido por 7 dias.", ln=1)
 
-    return pdf.output(dest="S").encode("latin-1")
+    return bytes(pdf.output())
