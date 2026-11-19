@@ -1,18 +1,13 @@
-
 from fpdf import FPDF
-
 NOMBRE_KIOSCO = "Kiosco Laucha"
 LOGO = "LOGO.LAUCHA.png"
-
 
 def renglon(pdf, texto, valor):
     pdf.cell(120, 9, texto)
     pdf.cell(0, 9, valor, align="R", ln=1)
 
-
 def limpiar(texto):
     return texto.encode("latin-1", "ignore").decode("latin-1").strip()
-
 
 def armar_pdf(fecha, cliente, cantidad_Pizza, cantidad_Hamburguesa,
               cantidad_Panchos, cantidad_Sanguches_de_milanesa,
